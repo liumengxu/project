@@ -11,15 +11,15 @@
 
 return [
     // 数据库类型
-    'type'            => 'mysqli',
+    'type'            => 'mysql',
     // 服务器地址
     'hostname'        => '188.131.235.77',
     // 数据库名
     'database'        => 'lmx',
     // 用户名
-    'username'        => 'ubuntu',
+    'username'        => 'root',
     // 密码
-    'password'        => 'Gdc1015439000',
+    'password'        => 'root',
     // 端口
     'hostport'        => '3306',
     // 连接dsn
