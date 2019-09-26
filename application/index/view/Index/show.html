@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>简单实用国产jQuery UI框架 - DWZ富客户端框架(J-UI.com)</title>
+
+	<link href="themes/css/print.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div id="printBox" style="font-size: 0.5em;">
+	<table class="list" name="volist" id="vo">
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>名称</th>
+			<th>数量</th>
+			<th>创建时间</th>
+			<th>修改时间</th>
+			<th>操作</th>
+		</tr>
+		</thead>
+		<tbody>
+		{volist name="list" id="vo"}
+			<tr target="sid_user" rel="1">
+				<td><input name="id" value="{$vo.id}" ></td>
+				<td><input name="name" value="{$vo.name}" ></td>
+				<td><input name="num" value="{$vo.num}" ></td>
+				<td><input name="create_time" value="{$vo.create_time}" ></td>
+				<td><input name="update_time" value="{$vo.update_time}" ></td>
+				<td>
+					<a title="删除" target="ajaxTodo" href="demo/common/ajaxDone.html?id=xxx" class="btnDel">删除</a>
+					<a title="编辑" target="navTab" href="demo_page4.html?id=xxx" class="btnEdit">编辑</a>
+				</td>
+			</tr>
+		{/volist}
+
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
+</body>
+</html>

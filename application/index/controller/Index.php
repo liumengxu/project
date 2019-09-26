@@ -9,31 +9,23 @@ class Index extends Controller
 {
     public function index()
     {
-
         return $this->fetch();
-
     }
     public function add(){
-
-//        echo 22;die;
-//        $num = model('Num');
-//        $volist = $num->select();
-//        $this->assign('volist',$volist);
         return $this->fetch();
     }
 
     public function insert(){
-//        $data = Request::instance()->input();
-//        echo $data;
-        $data = [
-          'name' => "20",
-          'num'  => "20",
-        ];
-        var_dump($data);
+        $data = input('post.');
         $num = model('Num');
         $info = $num->save($data);
-        var_dump($info);
-
+    }
+    public function show(){
+        $num = model("Num");
+        $list = $num->select();
+//        var_dump($volist);
+        $this->assign('list',$list);
+        return $this->fetch();
     }
     public function update(){
         $num = model('Num');
