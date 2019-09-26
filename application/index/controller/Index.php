@@ -3,19 +3,33 @@ namespace app\index\controller;
 
 use app\index\model\User;
 use app\index\model\Num;
-class Index
+use think\Controller;
+
+class Index extends Controller
 {
     public function index()
     {
-        echo 333;
+
         return $this->fetch();
 
     }
+    public function add(){
+
+//        echo 22;die;
+//        $num = model('Num');
+//        $volist = $num->select();
+//        $this->assign('volist',$volist);
+        return $this->fetch();
+    }
+
     public function insert(){
+//        $data = Request::instance()->input();
+//        echo $data;
         $data = [
           'name' => "20",
           'num'  => "20",
         ];
+        var_dump($data);
         $num = model('Num');
         $info = $num->save($data);
         var_dump($info);

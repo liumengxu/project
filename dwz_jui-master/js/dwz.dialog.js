@@ -210,7 +210,7 @@
 				height:$(dialog).css("height"),
 				width:$(dialog).css("width")
 			});
-			resizable.show();
+			resizable.add();
 		},
 		/**
 		 * 改变阴隐层

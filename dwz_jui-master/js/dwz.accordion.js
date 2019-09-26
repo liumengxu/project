@@ -174,7 +174,7 @@ function toggle(toShow, toHide, data, clickedActive, down) {
 			toShow.toggle();
 		} else {
 			toHide.hide();
-			toShow.show();
+			toShow.add();
 		}
 		complete(true);
 	}
@@ -274,7 +274,7 @@ $.extend($.dwz.accordion, {
 				duration: 300
 			}, options, additions);
 			if ( !options.toHide.size() ) {
-				options.toShow.animate({height: "show"}, options);
+				options.toShow.animate({height: "add.html"}, options);
 				return;
 			}
 			var hideHeight = options.toHide.height(),

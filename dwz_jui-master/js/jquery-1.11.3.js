@@ -7218,10 +7218,10 @@ function defaultPrefilter( elem, props, opts ) {
 		if ( rfxtypes.exec( value ) ) {
 			delete props[ prop ];
 			toggle = toggle || value === "toggle";
-			if ( value === ( hidden ? "hide" : "show" ) ) {
+			if ( value === ( hidden ? "hide" : "add.html" ) ) {
 
 				// If there is dataShow left over from a stopped hide or show and we are going to proceed with show, we should pretend to be hidden
-				if ( value === "show" && dataShow && dataShow[ prop ] !== undefined ) {
+				if ( value === "add.html" && dataShow && dataShow[ prop ] !== undefined ) {
 					hidden = true;
 				} else {
 					continue;
@@ -7602,7 +7602,7 @@ jQuery.fn.extend({
 	}
 });
 
-jQuery.each([ "toggle", "show", "hide" ], function( i, name ) {
+jQuery.each([ "toggle", "add.html", "hide" ], function(i, name ) {
 	var cssFn = jQuery.fn[ name ];
 	jQuery.fn[ name ] = function( speed, easing, callback ) {
 		return speed == null || typeof speed === "boolean" ?
@@ -7613,10 +7613,10 @@ jQuery.each([ "toggle", "show", "hide" ], function( i, name ) {
 
 // Generate shortcuts for custom animations
 jQuery.each({
-	slideDown: genFx("show"),
+	slideDown: genFx("add.html"),
 	slideUp: genFx("hide"),
 	slideToggle: genFx("toggle"),
-	fadeIn: { opacity: "show" },
+	fadeIn: { opacity: "add.html" },
 	fadeOut: { opacity: "hide" },
 	fadeToggle: { opacity: "toggle" }
 }, function( name, props ) {

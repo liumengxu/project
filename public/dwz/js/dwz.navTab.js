@@ -30,7 +30,7 @@ var navTab = {
 		this._prevBut.click(function(event) {$this._scrollPrev()});
 		this._nextBut.click(function(event) {$this._scrollNext()});
 		this._moreBut.click(function(){
-			$this._moreBox.show();
+			$this._moreBox.add();
 			return false;
 		});
 		$(document).click(function(){$this._moreBox.hide()});
@@ -196,8 +196,8 @@ var navTab = {
 			this._nextBut.hide();
 			this._tabBox.parent().removeClass("tabsPageHeaderMargin");
 		} else {
-			this._prevBut.show().removeClass("tabsLeftDisabled");
-			this._nextBut.show().removeClass("tabsRightDisabled");
+			this._prevBut.add().removeClass("tabsLeftDisabled");
+			this._nextBut.add().removeClass("tabsRightDisabled");
 			this._tabBox.parent().addClass("tabsPageHeaderMargin");
 			if (this._getLeft() >= 0){
 				this._prevBut.addClass("tabsLeftDisabled");

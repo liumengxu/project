@@ -87,7 +87,7 @@
 							}
 						}
 					}
-					$item.insertAfter($placeholder).show();
+					$item.insertAfter($placeholder).add();
 					$placeholder.remove();
 					$helper.remove();
 				},

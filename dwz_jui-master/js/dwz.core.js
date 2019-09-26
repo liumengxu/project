@@ -320,7 +320,7 @@ var DWZ = {
 				$this.focus(function(){
 					getAltBox().css(altBoxCss(0.3));
 				}).blur(function(){
-					if (!$(this).val()) getAltBox().show().css("opacity",1);
+					if (!$(this).val()) getAltBox().add().css("opacity",1);
 				}).keydown(function(){
 					getAltBox().hide();
 				});

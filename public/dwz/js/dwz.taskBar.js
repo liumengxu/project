@@ -135,8 +135,8 @@
 				if(this._getTasks().eq(0)[0])this._scrollTask(this._getTasks().eq(0));
 			} else {
 				this._taskBox.addClass(this._op.boxMargin);
-				this._nextBut.show().removeClass(this._op.nextDis);
-				this._prevBut.show().removeClass(this._op.prevDis);
+				this._nextBut.add().removeClass(this._op.nextDis);
+				this._prevBut.add().removeClass(this._op.prevDis);
 				if (this._getLeft() >= 0){
 					this._prevBut.addClass(this._op.prevDis);
 				}
