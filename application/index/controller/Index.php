@@ -20,8 +20,6 @@ class Index
 
         echo 222;
 
-        $user = D("users");
-        var_dump($user);
     }
     public function insert(){
 
