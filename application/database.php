@@ -16,6 +16,7 @@ return [
     'hostname'        => '188.131.235.77',
     // 数据库名
     'database'        => 'lmx',
+    
     // 用户名
     'username'        => 'root',
     // 密码
