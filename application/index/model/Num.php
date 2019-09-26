@@ -1,11 +1,14 @@
 <?php
+
+
 namespace app\index\model;
+
+
 use think\Model;
 
-class user extends Model{
-    // 设置当前模型对应的完整数据表名称
-
-    protected $table = 'p_user';
+class Num extends Model
+{
+    protected $table = 'p_num';
 
     // 字段合法性检测
     protected $field = true;
@@ -15,6 +18,4 @@ class user extends Model{
 
     // 主键
     protected $pk = 'uid';
-
-
 }
