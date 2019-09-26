@@ -17,16 +17,16 @@ return [
         'name' => '\w+',
     ],
     '[hello]'     => [
-        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['index/hello', ['method' => 'post']],
+        ':id'   => ['Index/hello', ['method' => 'get'], ['id' => '\d+']],
+        ':name' => ['Index/hello', ['method' => 'post']],
     ],
 
 ];
 
 
 Route::group('',function(){
-    Route::get('index','index/index/index');
-    Route::get('a','index/index/a');
+    Route::get('Index','Index/Index/Index');
+    Route::get('a','Index/Index/a');
 });
 
 

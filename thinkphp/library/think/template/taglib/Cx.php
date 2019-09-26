@@ -122,7 +122,7 @@ class Cx extends Taglib
     /**
      * foreach标签解析 循环输出数据集
      * 格式：
-     * {foreach name="userList" id="userController" key="key" index="i" mod="2" offset="3" length="5" empty=""}
+     * {foreach name="userList" id="userController" key="key" Index="i" mod="2" offset="3" length="5" empty=""}
      * {userController.username}
      * {/foreach}
      * @access public
@@ -173,14 +173,14 @@ class Cx extends Taglib
         $parseStr .= 'else: ';
 
         // 设置了索引项
-        if (isset($tag['index'])) {
-            $index = $tag['index'];
+        if (isset($tag['Index'])) {
+            $index = $tag['Index'];
             $parseStr .= '$' . $index . '=0; ';
         }
         $parseStr .= 'foreach(' . $var . ' as $' . $key . '=>$' . $item . '): ';
         // 设置了索引项
-        if (isset($tag['index'])) {
-            $index = $tag['index'];
+        if (isset($tag['Index'])) {
+            $index = $tag['Index'];
             if (isset($tag['mod'])) {
                 $mod = (int) $tag['mod'];
                 $parseStr .= '$mod = ($' . $index . ' % ' . $mod . '); ';
