@@ -9,24 +9,26 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
+use think\Route;
 
-use think\facade\Route;
-
-return [
-    '__pattern__' => [
-        'name' => '\w+',
-    ],
-    '[hello]'     => [
-        ':id'   => ['Index/hello', ['method' => 'get'], ['id' => '\d+']],
-        ':name' => ['Index/hello', ['method' => 'post']],
-    ],
-
-];
+//return [
+//    '__pattern__' => [
+//        'name' => '\w+',
+//    ],
+//    '[hello]'     => [
+//        ':id'   => ['Index/hello', ['method' => 'get'], ['id' => '\d+']],
+//        ':name' => ['Index/hello', ['method' => 'post']],
+//    ],
+//
+//];
 
 
 Route::group('',function(){
     Route::get('Index','Index/Index/Index');
-    Route::get('a','Index/Index/a');
+    Route::get('delete','Index/Index/delete');
+    Route::get('update','Index/Index/update');
+    Route::get('show','Index/Index/show');
+    Route::get('insert','Index/Index/insert');
 });
 
 

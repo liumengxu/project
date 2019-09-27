@@ -29,7 +29,8 @@ return [
     // 扩展函数文件
     'extra_file_list'        => [THINK_PATH . 'helper' . EXT],
     // 默认输出类型
-    'default_return_type'    => 'html',
+//    'default_return_type'    => 'html',
+    'default_return_type'    => 'json',
     // 默认AJAX 数据返回格式,可选json xml ...
     'default_ajax_return'    => 'json',
     // 默认JSONP格式返回的处理方法
@@ -37,7 +38,7 @@ return [
     // 默认JSONP处理方法
     'var_jsonp_handler'      => 'callback',
     // 默认时区
-    'default_timezone'       => 'PRC',
+    'default_timezone'       => 'Asia/Shanghai',
     // 是否开启多语言
     'lang_switch_on'         => false,
     // 默认全局过滤方法 用逗号分隔多个
@@ -77,7 +78,7 @@ return [
     // PATHINFO变量名 用于兼容模式
     'var_pathinfo'           => 's',
     // 兼容PATH_INFO获取
-    'pathinfo_fetch'         => ['ORIG_PATH_INFO', 'REDIRECT_PATH_INFO', 'REDIRECT_URL'],
+    'pathinfo_fetch'         => ['ORIG_PATH_INFO', 'REDIRECT_PATH_INFO', 'REDIRECT_URL','REQUEST_URI'],
     // pathinfo分隔符
     'pathinfo_depr'          => '/',
     // URL伪静态后缀
@@ -89,7 +90,7 @@ return [
     // 是否开启路由
     'url_route_on'           => true,
     // 路由使用完整匹配
-    'route_complete_match'   => false,
+    'route_complete_match'   => true,
     // 路由配置文件（支持配置多个）
     'route_config_file'      => ['route'],
     // 是否开启路由解析缓存

@@ -18,4 +18,23 @@ class Num extends Model
 
     // 主键
     protected $pk = 'uid';
+
+
+
+    public static function sav(){
+        return self::save();
+
+    }
+    public static function add(){
+        return self::insert();
+    }
+    public static function show(){
+        return self::select();
+    }
+
+    public static function del($id){
+
+        return self::where('id',$id)->delete();
+    }
+
 }
